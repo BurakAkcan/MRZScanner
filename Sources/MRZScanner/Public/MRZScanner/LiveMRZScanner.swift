@@ -15,7 +15,7 @@ public final class LiveMRZScanner: ScannerService, LiveScanner {
     public init(frequency: Int = 2) {
         scanner = DefaultScanner(
             textRecognizer: VisionTextRecognizer(),
-            validator: MRZValidator(),
+            validator: SmartMRZValidator(),
             parser: MRZLineParser()
         )
 
